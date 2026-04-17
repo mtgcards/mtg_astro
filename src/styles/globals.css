@@ -1,5 +1,9 @@
 /* ===== Design Tokens ===== */
 :root {
+  /* Fonts */
+  --font-cinzel: 'Cinzel', serif;
+  --font-medieval-sharp: 'MedievalSharp', cursive;
+
   /* Primary accent */
   --gold:         #d4a017;
   --gold-light:   #ffe699;
