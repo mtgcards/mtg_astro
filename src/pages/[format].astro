@@ -1,7 +1,8 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import { DEFAULT_FORMAT, SITE_URL } from '@/lib/constants';
+import { ALL_FORMAT_KEYS, SITE_URL, DEFAULT_FORMAT } from '@/lib/constants';
 import { loadCardsForFormat } from '@/lib/cards';
+import { isFormatKey } from '@/lib/utils';
 import { t, tHas } from '@/lib/i18n';
 import CardGrid from '@/components/react/CardGrid';
 import TabBar from '@/components/react/TabBar';
@@ -12,10 +13,21 @@ import { DEFAULT_THRESHOLDS } from '@/lib/constants';
 
 export const prerender = true;
 
-const format = DEFAULT_FORMAT;
+export function getStaticPaths() {
+  return ALL_FORMAT_KEYS
+    .filter((key) => key !== DEFAULT_FORMAT)
+    .map((format) => ({ params: { format } }));
+}
+
+const { format } = Astro.params;
+
+if (!isFormatKey(format)) {
+  return Astro.redirect('/');
+}
+
 const cards = loadCardsForFormat(format);
 const label = t(`formats.${format}`);
-const pageUrl = '/';
+const pageUrl = `/${format}`;
 const currentUrl = `${SITE_URL}${pageUrl}`;
 const homeUrl = `${SITE_URL}/`;
 const listName = tHas(`formatPageTitles.${format}`)

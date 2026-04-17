@@ -27,14 +27,14 @@ export default function TabBar({ activeFormat }: TabBarProps) {
         );
       })}
       <a
-        href="/ja/price_movers/7d"
+        href="/price_movers/7d"
         className={`tab-btn${activeFormat === 'price_movers' ? ' active' : ''}`}
         role="tab"
       >
         {t('tabs.priceMovers')}
       </a>
       <a
-        href="/ja/videos"
+        href="/videos"
         className={`tab-btn${activeFormat === 'videos' ? ' active' : ''}`}
         role="tab"
       >

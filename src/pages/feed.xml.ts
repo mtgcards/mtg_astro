@@ -50,7 +50,7 @@ function generateRssItem(
   const changeSign = changePercent >= 0 ? '+' : '';
 
   const title = `${card.name} (${PERIOD_LABELS[period]}: ${changeSign}${changePercent}%)`;
-  const link = `${SITE_URL}/ja/price_movers/${period}`;
+  const link = `${SITE_URL}/price_movers/${period}`;
   const guid = `${card.name}-${card.setId}-${period}-${index}`;
   const description = `${card.name} (${card.rarity}) - ${card.setName} : $${card.price} (${changeSign}${changePercent}%)`;
 
@@ -87,7 +87,7 @@ export async function GET(): Promise<Response> {
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>${escapeXml('昭和MTG 高額コモン&アンコモン貴重品室 - 値上がりカード')}</title>
-    <link>${SITE_URL}/ja/price_movers</link>
+    <link>${SITE_URL}/price_movers</link>
     <description>MTGコモン・アンコモンの値上がりカード情報</description>
     <language>ja</language>
     <lastBuildDate>${pubDate}</lastBuildDate>

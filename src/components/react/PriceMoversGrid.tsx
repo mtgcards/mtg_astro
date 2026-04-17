@@ -45,7 +45,7 @@ export default function PriceMoversGrid({ data, period }: PriceMoversGridProps) 
           {PERIOD_KEYS.map((p) => (
             <a
               key={p}
-              href={`/ja/price_movers/${p}`}
+              href={`/price_movers/${p}`}
               className={`period-tab${p === period ? ' active' : ''}`}
             >
               {t(`priceMovers.periods.${p}`)}
