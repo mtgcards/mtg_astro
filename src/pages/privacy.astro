@@ -3,6 +3,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import { SITE_URL } from '@/lib/constants';
 import { t, tRaw } from '@/lib/i18n';
 import BreadcrumbJsonLd from '@/components/astro/BreadcrumbJsonLd.astro';
+import TabBar from '@/components/react/TabBar';
 export const prerender = true;
 
 import '@/styles/privacy.css';
@@ -29,7 +30,12 @@ const externalItems = tRaw('privacy.externalItems') as string[];
         { name: t('privacy.title'), url: privacyUrl },
       ]}
     />
-    <div class="cobble-frame">
+    <div class="top-bar">
+      <div class="header-compact">
+        <h1>{t('site.name')}</h1>
+      </div>
+      <TabBar activeFormat="privacy" client:load />
+      <div class="cobble-frame">
       <div class="cobble-inner">
         <h1>{t('privacy.title')}</h1>
         <p class="last-updated">{t('privacy.lastUpdated')}</p>
@@ -91,6 +97,7 @@ const externalItems = tRaw('privacy.externalItems') as string[];
           {t('common.backToHome')}
         </a>
       </div>
+    </div>
     </div>
   </main>
 </BaseLayout>
