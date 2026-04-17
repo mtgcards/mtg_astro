@@ -30,5 +30,8 @@ export default defineConfig({
     define: {
       'process.env.NEXT_PUBLIC_SITE_URL': JSON.stringify(process.env.NEXT_PUBLIC_SITE_URL || 'https://mtg.syowa.workers.dev'),
     },
+    optimizeDeps: {
+      include: ['react', 'react-dom/client'],
+    },
   },
 });

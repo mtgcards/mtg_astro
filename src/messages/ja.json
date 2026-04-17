@@ -95,7 +95,9 @@
     "basicLand": "Basic Land Price Threshold:",
     "token": "Token Price Threshold:",
     "foilCommon": "Foil Common Price Threshold:",
-    "foilUncommon": "Foil Uncommon Price Threshold:"
+    "foilUncommon": "Foil Uncommon Price Threshold:",
+    "toggleOpen": "▼ 表示設定",
+    "toggleClose": "▲ 表示設定を閉じる"
   },
   "jsonLd": {
     "availableLanguage": "Japanese",
