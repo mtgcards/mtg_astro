@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "include": [
+    "/*"
+  ],
+  "exclude": [
+    "/",
+    "/_astro/*",
+    "/apple-icon.png",
+    "/favicon.ico",
+    "/favicon.svg",
+    "/google57e60186c12ce102.html",
+    "/icon.png",
+    "/llms.txt",
+    "/robots.txt",
+    "/web-app-manifest-192x192.png",
+    "/web-app-manifest-512x512.png",
+    "/og/*",
+    "/feed.xml",
+    "/ja",
+    "/ja/about",
+    "/ja/contact",
+    "/ja/price_movers/24h",
+    "/ja/price_movers/7d",
+    "/ja/price_movers/30d",
+    "/ja/price_movers/90d",
+    "/ja/privacy",
+    "/ja/videos",
+    "/ja/y2004_2014",
+    "/ja/y2015_2020",
+    "/ja/y2021_2022",
+    "/ja/y2023_2025",
+    "/ja/y2026_",
+    "/ja/basic_land",
+    "/ja/token",
+    "/ja/foil"
+  ]
+}
